@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up :: CoinsKash</title>
     <link rel="stylesheet" href="style_sign_up.css" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+   />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     
 </head>
 <body>
@@ -272,11 +276,11 @@
                         <option value="Zimbabwe">Zimbabwe</option>
                 </select>
                         
-                <input type="tel" name="telNumber" id="telNumber" placeholder="Phone number" required>
+                <input type="tel" name="telNumber" id="telNumber" placeholder="Phone number" required class="telNumber">
                 <input type="password" name="password" id="password" placeholder="Password" required>
                 <span>
-                    <input type="checkbox" name="check" id="check">
-                    <label for="check">Show Password</label>
+                    <input type="checkbox" name="check" id="togglePswd">
+                    <label for="togglePswd" class="visible">Show Password</label>
                 </span>
                 
 
@@ -292,8 +296,30 @@
         </div>
 
     </div>
+    <!-- Java Script for International telephone code -->
+    <script>
+     const phoneInputField = document.querySelector('#telNumber');
+        phoneInput = window.intlTelInput(phoneInputField, {
+            utilsScript:
+       "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        });
+    </script>
 
-    <script src="form.js"></script>
+
+    <!-- Java Script for toggle Password on checkbox -->
+    <script>
+        const togglePassword = document.querySelector("#togglePswd");
+const password = document.querySelector("#password");
+
+togglePassword.addEventListener("click", function () {
+    // toggle the type attribute
+    const type = password.getAttribute("type") === "password" ? "text" : "password";
+    password.setAttribute("type", type);
+    
+    // toggle the icon
+    type.classList.toggle("visible");
+});
+    </script>
     
 </body>
 </html>

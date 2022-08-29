@@ -19,10 +19,10 @@
         </div>
         <ul class="mobile-menu" id="mobile-btn">
                 <li>
-                    <a href="#">Sign Up</a>
+                    <a href="signUp.html">Sign Up</a>
                 </li>
                 <li>
-                    <a href="#">Login</a>
+                    <a href="login.html">Login</a>
                 </li>
                 <li>
                     <a href="#">Exchange Rates</a>
@@ -44,10 +44,10 @@
         
         <ul class="secondary-menu">
             <li class="left-line">
-                <a href="#">Log In</a>
+                <a href="login.html">Log In</a>
             </li>
             <li class="btn-like">
-                <a href="#">Get Started</a>
+                <a href="signUp.html">Get Started</a>
             </li>
         </ul>    
     </header>
@@ -306,7 +306,15 @@
     </footer>
 
 
-    <script src="script.js"></script>
+    <script>
+   const phoneInputField = document.querySelector("#phone");
+   const phoneInput = window.intlTelInput(phoneInputField, {
+     utilsScript:
+       "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+   });
+    </script>
+
+    
     
 </body>    
     
