@@ -1,26 +1,20 @@
 // JavaScript for the Mobile Menu List
-/*
-const openBtn = document.getElementById('open-menu');
-const closeBtn = document.getElementById('close-menu');
-const menuList = document.getElementById('mobile-btn');
-const navbar = document.querySelector('.mobile-menu')
+const openBtn = document.getElementById('open-menu')
+const menuList = document.getElementById('mobile-btn')
+const closeBtn = document.getElementById('close-menu')
 
 openBtn.addEventListener('click', () => {
-    menuList.style.display = 'block';
-    openBtn.style.display = 'none';
-    closeBtn.style.display = 'block';
-    openBtn.classList.remove('close-icon')
-    // closeBtn.classList.toggle('close-icon')
-  
-  })
-  closeBtn.addEventListener('click', () => {
-    menuList.style.display = 'none';
-    openBtn.style.display = 'block';
-    closeBtn.style.display = 'none'
-    // openBtn.classList.toggle('open-icon')
-    closeBtn.classList.add('open-icon')
-  })*/
+  openBtn.classList.toggle('open-icon');
+  closeBtn.classList.toggle('close-icon');
+  menuList.classList.toggle('mobile-list')
 
+  
+})
+closeBtn.addEventListener('click', () => {
+    closeBtn.classList.toggle('close-icon');
+    openBtn.classList.toggle('open-icon');
+    menuList.classList.toggle('mobile-list')
+})
 
  /*
   const togglePassword = document.querySelector("#togglePswd");
@@ -34,6 +28,15 @@ openBtn.addEventListener('click', () => {
       // toggle the icon
       type.classList.toggle("visible");
   });*/
+
+
+  /*
+  const phoneInputField = document.querySelector("#phone");
+   const phoneInput = window.intlTelInput(phoneInputField, {
+     utilsScript:
+       "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+   });
+  */
 
 
 
