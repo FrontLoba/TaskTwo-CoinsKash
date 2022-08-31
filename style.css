@@ -387,10 +387,7 @@ img.phone-left {
 }
 
 /* CSS for Teestimonial section */
-.testimonial {
-    background-color: #8C8F91;
-    
-}
+
 .testimonial  h3 {
     font-size: 48px;
     color:#191F2B;
@@ -452,6 +449,9 @@ p.quote-mark {
     top: 40px;
     font-family:'Trebuchet MS';
     font-size: 100px;
+}
+p.stars {
+    color: goldrod;
 }
 
 .h-scroll {
@@ -636,12 +636,15 @@ ul.im-icons {
     }
 
     /* The Conversion and scale measure - section  (mobile view */
+    .conversion h2 {
+        max-width: none;
+    }
     section.conversion {
         padding: 0 1.5em;
     }
     .digit {
         position: relative;
-        top: 70px;
+        top: -50px;
     }
     
     .manual-scale {
@@ -706,21 +709,28 @@ ul.im-icons {
     .app-mobile img {
         width: 100%;
         height: auto;
-        max-width: 250px;
-        margin-top: unset;
+        max-width: 200px;
+        /* margin-top: unset; */
         position: relative;
-        top: 150px;
+        /* top: 85px; */
     }
     .getApp {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        width: 85%;
+        /* justify-content: space-around; */
+        width: 80%;
         margin: 0 auto;
     }
     .getApp div {
         width: 100%;
         margin-top: 100px;
+    }
+    .getApp-logo {
+        margin-top: 2.5em;
+        margin-right: 10px;
+        /* width: 100%;
+        height: auto;
+        max-width: 150px; */
     }
    
     /* CSS for footer (mobile view) */
