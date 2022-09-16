@@ -5,6 +5,19 @@ const slides = document.getElementsByClassName('slide');
 const arrowLeft = document.querySelector('#arrow-left');
 const arrowRight = document.querySelector('#arrow-right');
 
+
+arrowLeft.addEventListener('click', () => {
+  for (let i = slidesContainer.length - 1; i > 0; i--) {
+   slidesContainer[i]
+  }
+});
+arrowRight.addEventListener('click', () => {
+  for (let i = 1; i < slidesContainer.length; i++){
+    slidesContainer[i]
+  }
+})
+
+/*
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -35,3 +48,4 @@ slides[slideIndex - 1].style.display = 'block'
 
 arrowLeft.addEventListener('click', arrowIndicator(-1));
 arrowRight.addEventListener('click', arrowIndicator(1));
+*/

@@ -1,6 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@200;300;400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap"); */
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -119,14 +121,21 @@ body {
 .main_pan form input, .main_pan select {
   display: block;
   width: 100%;
-  margin-bottom: 1.5em;
+  /* margin-bottom: 1em; */
   border-radius: 0.5em;
   border: 1px solid #8C8F95;
-  padding: 0.8em;
+  padding: 1em;
 }
-input[type=password] {
+.formControl {
+  /* margin-bottom: 1em; */
+  border-radius: 0.5em;
+  /* border: 1px solid #8C8F95; */
+  /* padding: 0.8em; */
+}
+
+/* input[type=password] {
   margin: 1.5em 0;
-}
+} */
 
 .main_pan select option {
   /* font-family: 'Spline Sans', sans-serif; */
@@ -143,16 +152,20 @@ input[type=password] {
 }
 
 .main_pan input[type=checkbox] {
-  margin-top: 5px;
+  /* margin-top:em; */
   width: 20px;
   background: #3F3F3F;
   font-weight: 500;
+  display: inline-block;
+}
+.checkInput {
+  position: relative;
+  top: -2px;
 }
  .main_pan input[type=submit]:hover {
   background-color: #100f7c;
   cursor: pointer;
 }
-
 
 .main_pan span {
   display: flex;
@@ -197,6 +210,27 @@ label.visible {
 
 .login a:hover {
   font-weight: 500;
+}
+
+.formControl small {
+  margin-top: -10px;
+  margin-left: 10px;
+  color: red;
+  font-style: italic;
+  font-size: 0.75em;
+  visibility: hidden;
+}
+.formControl.success input {
+  border: 2px solid#2ecc71;
+}
+
+.formControl.error input {
+  border: 2px solid #e74c3c;
+}
+
+.formControl.error small {
+  color: #e74c3c;
+  visibility: visible;
 }
 
 .rightpan {

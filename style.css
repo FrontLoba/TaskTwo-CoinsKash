@@ -19,7 +19,14 @@ header{
     justify-content: space-around;
     box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.04);
     height: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+    background-color: #fff;
+    opacity: 0.9;
+    
 }
+
 ul{
     display: flex;
 
@@ -34,6 +41,12 @@ header ul li a{
     color: #191F2B;
     font-size: 1em;
 }
+
+header ul li a:hover {
+    font-weight: 500;
+}
+
+
 .btn-like {
     padding: 1em 2em;
     background: #604AED;
@@ -43,6 +56,15 @@ header ul li a{
 .btn-like a {
     color: white;
 }
+.btn-like a:hover {
+    color: #604AED;
+}
+
+.btn-like:hover {
+    border: 2px solid #604AED;
+    background-color: #fff;
+}
+
 .left-line {
     border-right: 1px solid #604AED;
 }
@@ -416,21 +438,21 @@ img.phone-left {
     list-style: none;
     scroll-behavior: smooth;
     position: relative;
-    width: 100%;
+    width: 80%;
     max-width: 500px;
     height: 300px;
     /* overflow: hidden; */
 }
 .slide {
     position: absolute;
-    object-fit: cover;
+    /* object-fit: cover; */
 }
 
 .testimony li {
     background-color:#fff;
     box-shadow: 2px 4px 24px rgba(0, 0, 0, 0.04);
     border-radius: 15px;
-    /* width: 100%; */
+    width: 80%;
     /* max-width: 800px;
     height: aut; */
     padding: 30px;
@@ -555,7 +577,7 @@ ul.im-icons {
         position: absolute;
         top: 0;
         right: 0.25em;
-        font-size: 5em;
+        font-size: 4em;
         cursor: pointer;
         transition: 5s ease;
     }
@@ -587,7 +609,7 @@ ul.im-icons {
         top: 100px;
         padding: 1.5em 1em 0 1em;
         width: 100%;
-        min-height: 100%;
+        min-height: 100vh;
         background-color: #191F2B;
     }
 
